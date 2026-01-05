@@ -1,5 +1,5 @@
 {% set name = "felyx-report" %}
-{% set version = "1.1.9" %}
+{% set version = "1.1.10" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://gitlab.ifremer.fr/felyx/felyx_report/-/archive/{{ version }}/felyx_report-{{ version }}.tar.gz
-  sha256: 627757e72a2c3eaf2bf92517be3f00253867dc2ac1bd14827946458f0796ee80
+  sha256: 4bcd2c88a5f1cf0c7de74bc7a4875643f5efb6a47cc3a0c8b264c05269a4da2c
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 5
+  number: 0
   noarch: python
   entry_points:
     - felyx-report = felyx_report.cli.main:felyx_monitoring_report
